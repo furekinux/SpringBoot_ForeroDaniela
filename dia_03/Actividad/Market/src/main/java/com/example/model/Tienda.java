@@ -40,4 +40,7 @@ public class Tienda {
         }
     }
 
+    public void updtProduct(int index){
+
+    }
 }

@@ -24,6 +24,7 @@ public class MarketApplication {
 					"2. Agregar items\n" +
 					"3. Modificar items\n" +
 					"4. Eliminar items");
+
 			int choice = scanner.nextInt();
 
 			switch (choice){
@@ -65,8 +66,11 @@ public class MarketApplication {
 					System.out.println("--- Cerrando sesión ---\n");
 					menu=false;
 				}
+
 			}
+
 		}
+
 	}
 
 }
