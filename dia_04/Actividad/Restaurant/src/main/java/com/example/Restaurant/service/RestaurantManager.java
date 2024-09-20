@@ -54,9 +54,14 @@ public class RestaurantManager {
     public void deleteMesa(Long id){
         mesaRepository.deleteById(id);
     }
-    public Mesa updateMesa(Long id, @NotNull Mesa mesaDetails){
+    public Mesa updateMesa(Long id, Mesa mesaDetails){
         Mesa mesa = mesaRepository.findById(id).orElseThrow();
         mesa.setNumero_mesa(mesaDetails.getNumero_mesa());
+        mesa.setOcupada(mesaDetails.getOcupada());
+        return mesaRepository.save(mesa);
+    }
+    public Mesa updateMesaOcuppied(Long id, Mesa mesaDetails){
+        Mesa mesa = mesaRepository.findById(id).orElseThrow();
         mesa.setOcupada(mesaDetails.getOcupada());
         return mesaRepository.save(mesa);
     }

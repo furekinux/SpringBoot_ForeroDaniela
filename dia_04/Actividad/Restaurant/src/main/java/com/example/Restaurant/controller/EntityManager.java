@@ -62,6 +62,10 @@ public class EntityManager {
     public Mesa updateMesa(@PathVariable Long id,@RequestBody Mesa mesa){
         return restaurantManager.updateMesa(id, mesa);
     }
+    @PutMapping("/mesas/{id}/state")
+    public Mesa updateMesaOccuppied(@PathVariable Long id,@RequestBody Mesa mesa){
+        return restaurantManager.updateMesaOcuppied(id, mesa);
+    }
 
     @DeleteMapping("/mesas/{id}")
     public void deleteMesa(@PathVariable Long id){
