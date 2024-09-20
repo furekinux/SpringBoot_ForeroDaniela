@@ -35,7 +35,7 @@ public class Mesa {
         this.numero_mesa = numero_mesa;
     }
 
-    public boolean isOcupada() {
+    public boolean getOcupada() {
         return ocupada;
     }
     public void setOcupada(boolean ocupada) {
